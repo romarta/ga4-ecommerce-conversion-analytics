@@ -26,14 +26,15 @@ Analysis of e-commerce user behavior using Google Analytics 4 event data.
 
 ## Methodology
 
-Analyses use session-level data extracted with BigQuery SQL.
-Initial quality checks identified incomplete `add_to_cart` tracking and inconsistencies in checkout event sequences. Detailed conversion analyses therefore focus on November 25, 2020 – January 31, 2021, with event coverage distinguished from sequential conversion.
+Analysis is based on session-level GA4 data. Checkout metrics measure event coverage rather than strict sequential progression due to identified tracking limitations.
+
+See [Analytical Methodology](docs/methodology.md) for KPI definitions, analysis periods, and data limitations.
 
 ## Project Progress
 
-**Completed:** Data exploration, quality checks, session preparation, and checkout analysis.
+**Completed:** Data exploration, quality checks, session preparation, checkout analysis, product engagement, search and promotion behavior, acquisition analysis, repeat visits, and weekly trends.
 
-**Next:** Product engagement, audience analysis, statistical evaluation, and Power BI reporting.
+**Next:** Statistical analysis, Power BI dashboard, and business recommendations.
 
 ## Data Source
 
