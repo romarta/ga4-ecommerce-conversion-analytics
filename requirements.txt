@@ -1,0 +1,7 @@
+pandas
+scipy
+statsmodels
+matplotlib
+ipykernel
+seaborn
+google-cloud-bigquery[pandas]

@@ -42,3 +42,16 @@ These metrics describe recorded behavior and must not be interpreted as confirme
 - Search and promotion analyses measure associations, not causal effects.
 
 The dataset is a public, obfuscated sample. Findings should be interpreted as exploratory rather than representative of current store performance.
+
+## Python Statistical Analysis
+
+Session-level data is retrieved directly from BigQuery using `google-cloud-bigquery` and local Application Default Credentials (ADC).
+
+- **Source query:** `sql/06_statistical_export.sql`
+- **Notebook:** `notebooks/conversion_statistics.ipynb`
+- **Analysis period:** November 1, 2020 – January 31, 2021
+- **Dataset:** 360,129 unique sessions, including 4,848 purchase sessions
+- **Validation:** No missing values or duplicate session identifiers
+
+The dataset includes desktop, mobile, and tablet sessions. User identifiers are retained in memory to account for repeated sessions during statistical analysis.
+Raw session-level data and authentication credentials are not stored in the repository.

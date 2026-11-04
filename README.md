@@ -27,14 +27,13 @@ Analysis of e-commerce user behavior using Google Analytics 4 event data.
 ## Methodology
 
 Analysis is based on session-level GA4 data. Checkout metrics measure event coverage rather than strict sequential progression due to identified tracking limitations.
-
 See [Analytical Methodology](docs/methodology.md) for KPI definitions, analysis periods, and data limitations.
 
 ## Project Progress
 
-**Completed:** Data exploration, quality checks, session preparation, checkout analysis, product engagement, search and promotion behavior, acquisition analysis, repeat visits, and weekly trends.
+**Completed:** SQL exploration and behavioral analysis, data quality checks, methodology documentation, Python environment setup, BigQuery integration, and session data validation.
 
-**Next:** Statistical analysis, Power BI dashboard, and business recommendations.
+**Next:** Statistical testing, Power BI dashboard, and business recommendations.
 
 ## Data Source
 
