@@ -31,9 +31,9 @@ See [Analytical Methodology](docs/methodology.md) for KPI definitions, analysis 
 
 ## Project Progress
 
-**Completed:** SQL exploration and behavioral analysis, data quality checks, methodology documentation, Python environment setup, BigQuery integration, and session data validation.
+**Completed:** SQL exploration and behavioral analysis, data quality checks, methodology documentation, Python environment setup, BigQuery integration, session data validation, and Statistical testing.
 
-**Next:** Statistical testing, Power BI dashboard, and business recommendations.
+**Next:** Power BI dashboard, and business recommendations.
 
 ## Data Source
 
