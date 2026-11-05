@@ -22,12 +22,17 @@ SELECT
     user_pseudo_id,
     ga_session_id,
     PARSE_DATE('%Y%m%d', MIN(event_date)) AS session_date,
+    -- Preserve session start time to identify first and subsequent visits.
+    MIN(event_timestamp) AS session_timestamp,
     ARRAY_AGG(
         device_category IGNORE NULLS
         ORDER BY event_timestamp
         LIMIT 1
     )[SAFE_OFFSET(0)] AS device_category,
     COUNTIF(event_name = 'view_search_results') > 0 AS has_search,
+    -- Identify recorded promotion interactions within each session.
+    COUNTIF(event_name = 'view_promotion') > 0 AS has_promotion_view,
+    COUNTIF(event_name = 'select_promotion') > 0 AS has_promotion_click,
     COUNTIF(event_name = 'purchase') > 0 AS has_purchase
 FROM events
 WHERE user_pseudo_id IS NOT NULL AND ga_session_id IS NOT NULL

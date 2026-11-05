@@ -55,3 +55,18 @@ Session-level data is retrieved directly from BigQuery using `google-cloud-bigqu
 
 The dataset includes desktop, mobile, and tablet sessions. User identifiers are retained in memory to account for repeated sessions during statistical analysis.
 Raw session-level data and authentication credentials are not stored in the repository.
+
+## Statistical Methods
+
+Session conversion rates are compared using Linear Probability Models (OLS) with user-clustered robust standard errors (α = 0.05).
+
+- **Product Search:** Search vs. No Search; 95% confidence interval.
+- **Device Conversion:** Joint Wald test across desktop, mobile, and tablet.
+- **Promotion Engagement:** Joint Wald test across three segments and a Click vs. View Only contrast.
+- **Visit Behavior:** First Observed vs. Subsequent Sessions; 95% confidence interval.
+- **Weekday Conversion:** Joint Wald test across seven weekdays; exploratory Friday vs. Sunday contrast.
+
+The dataset contains 270,154 user clusters. Of these, 17.53% have multiple sessions, with a maximum of 12 sessions per user.
+Conversion by observed session number, session start hour (UTC), and weekday-hour combinations is analyzed descriptively. Later session numbers contain progressively smaller, selected groups.
+The unusually uniform hourly session distribution limits the interpretation of hourly patterns. The Friday vs. Sunday comparison was selected after inspecting the results and was not adjusted for multiple comparisons.
+All findings are observational associations, not evidence of causality.
