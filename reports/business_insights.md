@@ -42,7 +42,7 @@ These hourly patterns should not guide campaign scheduling without further valid
 ### Checkout Tracking
 
 During the tracking-sensitive analysis period (November 25, 2020 – January 31, 2021), **7,660 sessions** recorded `begin_checkout`, of which **3,711** also recorded a purchase (**48.45%**).
-However, only **2,313 of 3,712 purchasing sessions** contained the complete chronological sequence from checkout through shipping, payment, and purchase. Missing or inconsistent events prevent reliable funnel abandonment estimates.
+Of 3,712 purchase sessions, 2,313 (62.31%) contained the ordered checkout-to-purchase sequence, while only 1,707 (45.99%) contained the full ordered journey from product view to purchase. Another 1,398 sessions (37.66%) recorded checkout activity without the complete ordered checkout sequence. Additionally, 950 purchase sessions (25.59%) had no recorded add_to_cart event in the same session. These findings highlight limitations in observed event sequences and prevent reliable funnel abandonment estimates.
 
 ### Traffic and Acquisition
 

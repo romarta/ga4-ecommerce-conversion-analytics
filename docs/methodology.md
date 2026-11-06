@@ -28,9 +28,15 @@ Rates are calculated at session level, not from raw event counts.
 
 Initial checks found inconsistencies in event sequences. Of 3,712 purchase sessions in the shorter analysis period, only 2,313 contained the complete four-stage checkout sequence in the required order.
 
-Checkout reporting therefore measures **event coverage within sessions**, without enforcing chronological order.
+Checkout event coverage measures recorded event presence within sessions, not validated funnel progression or abandonment.
 
-These metrics describe recorded behavior and must not be interpreted as confirmed funnel progression or customer abandonment.
+Two additional metrics assess recorded purchase behavior:
+- **Missing Cart Event Rate:** Purchase sessions without `add_to_cart` / Purchase Sessions.
+- **Ordered Checkout Coverage:** Purchase sessions containing `begin_checkout → add_shipping_info → add_payment_info → purchase` in chronological order / Purchase Sessions. Repeated and intervening events are allowed.
+
+Purchase sessions are classified into five mutually exclusive categories: **Full Ordered Journey**, **Ordered Checkout, No Cart**, **Ordered Checkout, Other**, **Incomplete Checkout Order**, and **No Checkout Observed**.
+
+These categories describe observed within-session event sequences, not complete customer journeys. Events with identical timestamps may have ambiguous ordering.
 
 ## Data Quality and Limitations
 
